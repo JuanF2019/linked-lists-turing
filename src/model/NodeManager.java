@@ -14,8 +14,8 @@ public class NodeManager {
 	public void readInput() throws IOException {		
 		BufferedReader br = new BufferedReader(new FileReader("data//in_turing.txt"));
 		BufferedWriter bw = new BufferedWriter(new FileWriter("data//out_turing.txt"));
-		String line = br.readLine();
 		
+		String line = br.readLine();		
 		while(line != null) {
 			length = 0;
 			C0 = null;
@@ -28,10 +28,12 @@ public class NodeManager {
 					switch(charLine[i+1]) {
 					case '0'://Read
 						if(C0 != null) {
-							bw.write(C0.getLetter() + "\n");						
+							bw.write(C0.getLetter());	
+							bw.newLine();
 						}
 						else {
-							bw.write("#" + "\n");							
+							bw.write("#");		
+							bw.newLine();
 						}
 					break;
 					case '1'://Add
@@ -74,10 +76,12 @@ public class NodeManager {
 					switch(charLine[i+1]) {
 						case '0'://Read
 							if(C1 != null) {
-								bw.write(C1.getLetter() + "\n");
+								bw.write(C1.getLetter());
+								bw.newLine();
 							}
 							else {
-								bw.write("#" + "\n");
+								bw.write("#");
+								bw.newLine();
 							}
 						break;
 						case '1'://Add			
@@ -148,10 +152,12 @@ public class NodeManager {
 					switch(charLine[i+1]) {
 					case '0'://Read
 						if(C2 != null) {
-							bw.write(C2.getLetter() + "\n");
+							bw.write(C2.getLetter());
+							bw.newLine();
 						}
 						else {
-							bw.write("#" + "\n");
+							bw.write("#");
+							bw.newLine();
 						}
 					break;
 					case '1'://Add
