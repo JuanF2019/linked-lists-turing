@@ -4,6 +4,10 @@ import java.io.IOException;
 import model.NodeManager;
 
 public class Main {
+	/**
+	 * Executable main method.
+	 * @param args Arguments, code to execute
+	 */
 	public static void main(String[] args) {
 		NodeManager nm = new NodeManager();		
 		long t1 = 0;
